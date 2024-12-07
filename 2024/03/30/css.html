@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>css | 寒酥绛</title><meta name="author" content="@王兮沐"><meta name="copyright" content="@王兮沐"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="有东西被加密了, 输入密码查看哦!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css">
+<meta property="og:url" content="https://aeu105.github.io/2024/03/30/css.html">
+<meta property="og:site_name" content="寒酥绛">
+<meta property="og:description" content="有东西被加密了, 输入密码查看哦!">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aeu105.github.io/img/default_top_img.jpg">
+<meta property="article:published_time" content="2024-03-30T06:14:55.000Z">
+<meta property="article:modified_time" content="2024-09-18T15:04:02.524Z">
+<meta property="article:author" content="@王兮沐">
+<meta property="article:tag" content="css">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://aeu105.github.io/img/default_top_img.jpg"><link rel="shortcut icon" href="/img/icon.png"><link rel="canonical" href="https://aeu105.github.io/2024/03/30/css.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":512,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"Author: @王兮沐","link":"Link: ","source":"Source: 寒酥绛","info":"Copyright belongs to the author. For commercial use, please contact the author for authorization. For non-commercial use, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"You have switched to Traditional Chinese","cht_to_chs":"You have switched to Simplified Chinese","day_to_night":"You have switched to Dark Mode","night_to_day":"You have switched to Light Mode","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'css',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (true) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-image: url(/img/default_background_img.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/icon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">21</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> HOME</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> ARCHIVES</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> TAGS</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> CATEGORIES</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> LIST</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-image"></i><span> GALLERY</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> LINK</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> ABOUT</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/default_top_img.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">寒酥绛</span></a><a class="nav-page-title" href="/"><span class="site-name">css</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> HOME</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> ARCHIVES</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> TAGS</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> CATEGORIES</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> LIST</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-image"></i><span> GALLERY</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> LINK</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> ABOUT</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">css</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-03-30T06:14:55.000Z" title="Created 2024-03-30 14:14:55">2024-03-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-09-18T15:04:02.524Z" title="Updated 2024-09-18 23:04:02">2024-09-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/languages/">languages</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/languages/css/">css</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">9</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>1mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:365,&quot;messagePrev&quot;:&quot;It has been&quot;,&quot;messageNext&quot;:&quot;days since the last update, the content of the article may be outdated.&quot;,&quot;postUpdate&quot;:&quot;2024-09-18 23:04:02&quot;}" hidden></div><div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="912b04059fa9aa7d05c913d74f2ff5362e23c98065ce7d1c6ac7d48967b4bb62">52cc2b611a1c331f959e97bb560f9cb173af54a6865ffcf7f6867b1db36695d898e0e8c0e5399dbb5afbc0ab03a78a05e5e6f39c6eabf9e13c5bef956e9bf997dccd02dbe3f3e1bf1f79e67e5ed6c29e04af6b7c77311da86484575b94e6a3c7dcc35429981c3348bc7cc9d8d729c669696c92784d9376016bc73df39a0a84231b3406742bdf2fee3fd0f1d94bdddfd9615bc24d1791e381100eb3f23b65d803839d6d929ef03875db4aa652b4c7a9b37c6c6d5e81e7896b7815005b44e3e770b70bdec6b9a4e21540b180750187b525ed1008d7ae811b52323d946b1df5d1e247999a584843e6ea630118547a1d3676251f043f9ab900651b1b8212bb3479e5a486bd007fde583ca667a3283f97994efc51d0dabc48bd4935140ba2483c7cdc3c162e19feea9fb813057bd5e4d2414655c64c507001b6aa22763cc999c500260065f9c823542f01c41892f88b92cdd3844509b2838dad47668c2c6057076a8e63e9ee44ee1292ac8605ab4ad07ecdf22114747cbd43c647cf4d703724aa1e27f221b532a8b3c8380e58498e3a5eb8aab90d7f314d9c9636fc8d25d94a0525a031180659023b7d5c8b01df2158f40dcb9e9c6c100d695127d08c541e3acca9540365690d9c1c0421b4ee9daf55da0aa6a043f895a92e1c4824f0f4e30230edff261928e61c6a37fb5a764645f2732a8a08b619b09ac3174b6b3af4485c46027d0911e285f0d8e548cef811db45f905c2fc579cd3a0495d091e51789cc52e6d41f8a586b8394e87f07a30f1667a6ef6352e32b26779726bb29e449e6ef08a9515e7bb6ba2c31b13c72be987c69e09a960ca06994409deb39c4023514cf9eaf2313804673f1f0450654b9269537dbc436c69a4eb8459ceb23be3b1d5f76068f39c81631f415b1f0bf909ff7992ce9a3e7b2315c4265775abb6964dd12c7ab8caec450b0f08ff00d8cc799ac4b3606e015c63372954bf4c371fbc44edf81c6b18225a8db9d6b0133d1bcc379a61805a74c8a711b437cf8409954962590505b380765a76b08a6e6e249ab969e705d31f4f4cfd26cd13aff8c7c785e2bc72774742fef6414b036a59d66883a2b708086c4da7b676e63bfbde51f0f80f9f290d2fdc657e43eea92bea7508259ccb0f0bacde2796cfc0d2af62a158b511b449ef7c3127916a0eca05207a72683690b2a28fc97287d2ffb20bd70bce3cb8d780115c2137d86196875bc1560cbdb745dc9f1e3a6866ab15c26b2de409d53cca91026d8bfd5e6a97242f57afeb58505ca23c055da03c2e56bfc7edeb9f01f9dddecb90aeb7c8b124b11e69d572bfa79b6ec0a15ac81346bbba62d9f7015b8147411f60a7bda53a647af57bdb294ef183d495578c004b17689d93bdfa598c94658e87f575a2ee9ee85056a240777afc715a11a40a4813c6659a8ebe1cde95430506c7df9d0171cb026bf62ab3cea9a3c419bbc64bd061c428372d585d348b1fa681a160d49764ea814bf11028fa0e7e810e0efec49e4936eff2ed4e16d83c7d84c28ad482a2fe16446db8ea33b31c5d2fab7436b456b324975202191830b9c6326b88a104179e82ef825aec671c73b1e42b3346a8ad29e6359ee766c9f95d1ef909a8a258700cf24385f2c87d695285483b199ca2b34ec16d48c65a365aba31a5a1ff72f25440711179f5e3465373fbcc23fdb7f54c1e3f6a4684823c9f236aff3670369b93364d3d8c9bccc2d693637926a91f4606854b5f215e2438095145336fa0efa1322ede636c582ee6c4f89b9297d2ea42c8425bacb1d425fcc99e76f598d221ff50557bc50f75f1e41303131467d8a68d91d577ff26f134b92e4d7d9c3604842126d7dc410ecb228d071d44455dd9e935baa4d812fadb924101a9c712cab029a140629d931fbd44127fae0fb01fa964dbff631dea9d6ceca4abffe16987033a28ed418bee5ee9d48bfa7c70dc6ef225c661f8301c6b85c4788078268f404266912d40dcd8872ca0316747d7ad99b921481feede1d2020cd4aea8ea0831229196273115e3f8e6af7d4881488bf554ab13618f8c6f08958b70f3c873b96ba42f5e2835e28abb8e07f4e0db72fd12b63d4d36ebd047f01de0914b5881d3c4cb0d27f775450c9764ebc59c45f682a375b548cc9f469fba84040ca066c601f95de4cc9e51fcc594dbac06f4eb1326db37987763a8e607c5dc42566101e10dedbb8f7f17b55e547b808f43853cf291b8554424b90768d61cf56cfb49b062c88b2b6f517021695d14941b8b285184ea6f0bae9e509fe32f6b119181e3120c9259c8d73179ba9640345a7a52643380e8f1642ce029569e84fb29db651950640ad7b68b0d6901635d262cafd25c5cf2df784a9894e3105d360f07dc5df8659e5bb291b021f53d43750274598d829cd6dabea957c1c3a0745e9510f1445f8b63c8732395690a99525a518e65d8d87d49c85f50aadb694d1cbc62ab63d294011dadddc1850011d225c725c7cd6711c68683eb10f2dc75848f4046179558a5432fd7c416fdcc51caa0ce6f821db6e37450238793a704484c0a4cfefdd1749b0d935f7473c8a1fc5e261044ae1b5961ca82bd4d7fd2ce3de8bae5f6e5425485de73330499173b0bce8eaa53350de2d36f894b191bbb7c6a4871957ba5080fb0d332dd2908d01e5857bb03336c9f4727665957c93878855499675446af84177e7828a869f53a77e2393c1fe17b00f4c21721f890cdd0ed64091ceb767c62049581187e9c316e0980279f2a49efb27d7542f11f9461c29c1d237844aa82e74bfae6301681f4a192f77a93cd9a06008a2ef1a114f84c01ea4b38f470208854d39976a747d95ba9d2d9f0c773fc987097b15c328da7fff1b2a90916af5bec5dc7196b6e7785ac439da90ea32866b710da27832a136aa29f5f4ce39cdd02dd0f75c12ec8e7d716be626120d06ca241d472da337d62adc027c2fea8548b9432af3f670a743a24819dd26a11d5ba6b90277ffbaa25d9e3febab856de5ed8a06a9f6b78ee141fd8c4d70d524c54b28f6af2c8eb8256bf5ecdda69effa3b25a2172482a61d28bc43a7d68bace012e6df89bb581536e4a6ce2347b2977d11178a629674767d6540e761e576bb8de66ade34a2e24343515ad62c56e245fc1024fd1c6b6eb1d63d8a9fbc1fb82a8e59a1a114124e4b199291452680383a4c5974f63b58fd1681ee141964f7bf2e7d72f83bd7366a7c3fd04ede68a2b1c0686016a0cac9d4f621df54aeeb45fda9983855016dcfdb1e73938dece21b7f744becfa2d682e7e6b4e5d1484bb7a2a365540aa285ce7b7b8890c73d51141b726fbf78a3ddaec48ef362836e9ea77e0e2d2885923e17f36169a0896436191c3c0e2c90b7ea75b9efaea47e130521a5a60079eb7edf9caef3e0eab4fa832560258391532a3befb1ae696739f7ff8593c4f256636a099752dc259512aa03f59042332ce57c17d30ed53645f352e4c7e5e5e245937752377d655dfa891a85b7d1ebe2b1d5fd8ec0227cb3eb7f6cfac26a8a163888ec6d1b049ef5365a0e6cf57e42289096f5e7209c546f4cfa1ee895aacf6738c51db2b20e766ddb9490c3bc260af575c3730d3f2f2cd35c0f1098f820ebb837a2f5299ca5d8cd7c1b198633021de08413a805c352a6084e281f01b1a2011047bed34b0a8aeadcffb9f5ff8c1082467e955a4e1115a354e166fedff7f0528f4d8a5c534eea165a5da798ff9e4aa44dbc0914168d777fcf718cbeaf633c3a379bdc4ff1a700287c924aa96840a7a722751a9c6fe3f676d4b5a929474efa126d32cf45cf987a510288862810b0f7907473c6d599e14ab4f99cc6b0a3b6e11a664b1e3b78e0cc19be95fd1ab1613f41173475e26c5c31b97a2933dc2f6a373affc2f02e09ff5cb02b644362000b583de32dc56697f3fff6424f0882e33b6a044b26c04709d0b06b2d96f53e02b14b71cb6635c4dfa5efc639fa9f0dae200673fcaf8b65243a1710f91dd72b948fa5c296d31baf6a93366c46efb198a79015394f02688958c78e1e1d2846ee6a57e24afb61b3f2a13091124315cbbf7c434eac7e604b01f300838a52ebed96ce93b73330fce83e63b988f7da6857c19776374a850b9ed50f0750397e5925589bc20241da4a3f8321b3ca0f24e1d422c3f4bfdfe005ad23f5d9075aeceeba2bad311b216f1bf9ff3bc4fa17116cb31bd2bc90c33cb56110d1357a28bddd446dfba992ef7b0f64817d34238d4a0b1a738c37fe28268279ce1498f1d28178bcaf3c43c4d1f8b7d9e777b4acd186171e9c96ca46684b6f2509f87d462cbec9fbe6e2d4de1b2569353e348454ae0c37713fde7ae57c26d3143b720d697b31eb59737f2cef60d4ff7a86f340893f377a537a53f2e50dc5969e660a66e3ec06695b0b6a5bd025691821f81eb9adba83a4adc12bd243cf18f801e3590a07ac4f95dd450967c2d2823123480758792e5eaafef3c48de3f2719763d547682ef543a9cf6db46c399395768b6b374f1c9c0f50c8a86a64273dc761db99ce3c93275c2fc06fa7ca7bfbdcd1ee43852e6ddd361bcd5f1f9e45b4f0c6d34462280f1d6636367a03b43b4dbcd418785c73f6fb4ad4a37a66936e6a7a0bdd115fbf30a901d9952896d53eb3ab3e080c3d99135183ae703cbd7a635063dae93d29988509ecd83cae11c48d0dc65c2ca9d866f43b9104def96f3ccff15ed26554b4b0bd2d10557d70a9f13894d10b0a88df1facba3721390572955f7c27e6d4c2fa31b4c654f583af5dfd2349fcec4755bb1170123398542126c7f1e9fd18a47f5d1c09b75b573cfa612f8b69fc497e8f72ebebc2c8659a3a1d6ae3c3e927c137bba9bdc8db13a9308899a4280ca0f016f5b1c313e537856d047d1b966c5f3b37efc1b1025e66848fa8b3f9841d2971873f12278849441049190064c564bc013f46af65de0eccec8ac4f92f24739f5474619908dde62035cc7928995ac6f23fa4c825a6c4f3deb75a67397ba95c64833f1a87a4d2849ace6a36ac8f09ef05358574e18cb9893829a26331d0155b0af68665f8a98063a0f94d662fd4ff2c7f873febb28d97df7d58a5d9c2fc1b87ed88fd43e50b3dea72a6ee822981590b715009ddf87391134dc06092334905fdd28a98f8842a1061a99bfdb7d0efd61ab8c49ae9768f3230fba1606ee46a09adc49774157938ab4c3f5d50e0811b053b9b6239ad03fa7e1289892525306fb5180beb612393d664d2f272db63c4513c539f5fe353d8a80a22bae571f174058235105cbc859a002b170dd461c11fe42cc466e7d3b8579ef2ef6acbc4bd30334943933282dacff377cbfefd31de52fa376899190166b66f86fa05981682f7b39f7ce5367a5650c1d6c546274d07345c22a5b4c6f7d8f96e220e01bb3a9b25dbfb50da9ffa2eb75607295e3e386b714a55d68e6970e7b7d58429639a5ef2063ed37162e1ed1c7b3c566dbe93a4052754a9293075998a41391d3a953f91a951ccc03e0587ead48f1f1cd3b71a5112603710f5dfd5ab70118dd815f5e0a9915cfbd8ee09492f26c83236e118722594dc1b54d49ce74748a7b69048e25a3f40abb041912bf95a853167002123cfaddc102e0c399960556e76ee32e755a4761c1c16bef55dcd1a24fdc21ab0edfc392cc22b31d50f2643d8321443093e762e1e158f87f83ca2733435ee89812525a09bc0dfc3c44d6875982f7f1392909b0eb7de902399ebda9ee5c471b0b8c3e1fe14835d15f8c2db2096b615f07c37aedc2899e92bb72a0b7babab7ee7d14cdf898d7a1ce369c36d68d3ba662550c48c7ab876ebf7084b5ad9971f79d5e9d8a3f8b934419fa9583582e01269914e9011db4868c8ca19ef2bf6404f03717511d754b822eeb50693e665e75c3fe706872dafa220f6eda4d26871dbc5c5c594f5a6b16ead8de0fbfdc32d6533ca390995ce9fa216e310fbea52a370ad64a27761c769b10b7070639173b57a5103c42e63fe78dc906a4834ba8210d5e2566a7f749cb2d624839404925390b8c3654224cf79e5a8c6d5c1dd9c0d2aede31cd52ee19a196089975e0899b92650d5fca1e7a2fc75dc63a6a6be6fdb313181a765e2433ab57fc37e370bf8ceccfe9a7a5917e3ebeb70fc90c5d3</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这里需要一个密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css"></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://aeu105.github.io">@王兮沐</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://aeu105.github.io/2024/03/30/css.html">https://aeu105.github.io/2024/03/30/css.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/css/">css</a></div><div class="post-share"><div class="social-share" data-image="/img/default_top_img.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>Sponsor</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/pay/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/pay/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/pay/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/pay/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2024/04/16/wnmp.html" title="wnmp"><img class="cover" src="/img/category_img.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">wnmp</div></div><div class="info-2"><div class="info-item-1">  ...</div></div></div></a><a class="pagination-related" href="/2024/03/30/html.html" title="html"><img class="cover" src="/img/default_footer_img.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">html</div></div><div class="info-2"><div class="info-item-1">  ...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">@王兮沐</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">21</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/aeu105"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/aeu105" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:lyu891330971@hotmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">//</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content toc-div-class" style="display:none"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">CSS 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS-%E8%AF%AD%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">CSS 语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS-%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83"><span class="toc-number">1.2.</span> <span class="toc-text">CSS 代码规范</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.2.1.</span> <span class="toc-text">样式格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%86%99"><span class="toc-number">1.2.2.</span> <span class="toc-text">样式大小写</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%A9%BA%E6%A0%BC%E8%A7%84%E8%8C%83"><span class="toc-number">1.2.3.</span> <span class="toc-text">空格规范</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-%E5%9F%BA%E7%A1%80%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">CSS 基础选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">2.1.</span> <span class="toc-text">CSS 选择器的作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">2.2.</span> <span class="toc-text">选择器的分类</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">2.2.0.1.</span> <span class="toc-text">标签选择器</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">2.2.0.2.</span> <span class="toc-text">类选择器</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#id%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">2.2.0.3.</span> <span class="toc-text">id选择器</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%80%9A%E9%85%8D%E7%AC%A6%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">2.2.0.4.</span> <span class="toc-text">通配符选择器</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E9%80%89%E6%8B%A9%E5%99%A8%E6%80%BB%E7%BB%93"><span class="toc-number">2.2.1.</span> <span class="toc-text">基础选择器总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7%E3%80%81"><span class="toc-number">3.</span> <span class="toc-text">CSS 字体属性、</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E7%B3%BB%E5%88%97"><span class="toc-number">3.1.</span> <span class="toc-text">字体系列</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/08/26/butterfly.html" title="butterfly"><img src="/img/default_top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="butterfly"/></a><div class="content"><a class="title" href="/2024/08/26/butterfly.html" title="butterfly">butterfly</a><time datetime="2024-08-26T10:31:05.000Z" title="Created 2024-08-26 18:31:05">2024-08-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/26/plc.html" title="plc"><img src="/img/default_footer_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="plc"/></a><div class="content"><a class="title" href="/2024/08/26/plc.html" title="plc">plc</a><time datetime="2024-08-26T10:31:05.000Z" title="Created 2024-08-26 18:31:05">2024-08-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/20/raspberry.html" title="raspberry"><img src="/img/default_top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="raspberry"/></a><div class="content"><a class="title" href="/2024/05/20/raspberry.html" title="raspberry">raspberry</a><time datetime="2024-05-20T12:41:03.000Z" title="Created 2024-05-20 20:41:03">2024-05-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/04/24/mysql.html" title="mysql"><img src="/img/default_background_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mysql"/></a><div class="content"><a class="title" href="/2024/04/24/mysql.html" title="mysql">mysql</a><time datetime="2024-04-24T01:43:06.000Z" title="Created 2024-04-24 09:43:06">2024-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/04/23/gd32.html" title="gd32"><img src="/img/default_footer_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="gd32"/></a><div class="content"><a class="title" href="/2024/04/23/gd32.html" title="gd32">gd32</a><time datetime="2024-04-23T13:50:02.000Z" title="Created 2024-04-23 21:50:02">2024-04-23</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/default_footer_img.jpg);"><div id="footer-wrap"><div class="copyright">&copy;1995 - 2024 By @王兮沐</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><div><span>V 5.2.2</span></div></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(async () => {
+  const showKatex = () => {
+    document.querySelectorAll('#article-container .katex').forEach(el => el.classList.add('katex-show'))
+  }
+
+  if (!window.katex_js_css) {
+    window.katex_js_css = true
+    await btf.getCSS('https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css')
+    if (true) {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js')
+    }
+  }
+
+  showKatex()
+})()</script><script>(() => {
+  const $chartjs = document.querySelectorAll('#article-container .chartjs-container')
+  if ($chartjs.length === 0) return
+
+  const applyThemeDefaultsConfig = theme => {
+    if (theme === 'dark-mode') {
+      Chart.defaults.color = "rgba(255, 255, 255, 0.8)"
+      Chart.defaults.borderColor = "rgba(255, 255, 255, 0.2)"
+      Chart.defaults.scale.ticks.backdropColor = "transparent"
+    } else {
+      Chart.defaults.color = "rgba(0, 0, 0, 0.8)"
+      Chart.defaults.borderColor = "rgba(0, 0, 0, 0.1)"
+      Chart.defaults.scale.ticks.backdropColor = "transparent"
+    }
+  }
+
+  // Recursively traverse the config object and automatically apply theme-specific color schemes
+  const applyThemeConfig = (obj, theme) => {
+    if (typeof obj !== 'object' || obj === null) return
+    
+    Object.keys(obj).forEach(key => {
+      const value = obj[key]
+      // If the property is an object and has theme-specific options, apply them
+      if (typeof value === 'object' && value !== null) {
+        if (value[theme]) {
+          obj[key] = value[theme] // Apply the value for the current theme
+        } else {
+          // Recursively process child objects
+          applyThemeConfig(value, theme)
+        }
+      }
+    })
+  }
+
+  const runChartJS = () => {
+    window.loadChartJS = true
+
+    Array.from($chartjs).forEach((item, index) => {
+      const chartSrc = item.firstElementChild
+      const chartID = item.getAttribute('data-chartjs-id') || ('chartjs-' + index) // Use custom ID or default ID
+      const width = item.getAttribute('data-width')
+      const existingCanvas = document.getElementById(chartID)
+
+      // If a canvas already exists, remove it to avoid rendering duplicates
+      if (existingCanvas) {
+          existingCanvas.parentNode.remove()
+      }
+
+      const chartDefinition = chartSrc.textContent
+      const canvas = document.createElement('canvas')
+      canvas.id = chartID
+
+      const div = document.createElement('div')
+      div.className = 'chartjs-wrap'
+
+      if (width) {
+        div.style.width = width
+      }
+
+      div.appendChild(canvas)
+      chartSrc.insertAdjacentElement('afterend', div)
+
+      const ctx = document.getElementById(chartID).getContext('2d')
+
+      const config = JSON.parse(chartDefinition)
+
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark-mode' : 'light-mode'
+
+      // Set default styles (initial setup)
+      applyThemeDefaultsConfig(theme)
+
+      // Automatically traverse the config and apply dual-mode color schemes
+      applyThemeConfig(config, theme)
+
+      new Chart(ctx, config)
+    })
+  }
+
+  const loadChartJS = () => {
+    window.loadChartJS ? runChartJS() : btf.getScript('https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js').then(runChartJS)
+  }
+
+  // Listen for theme change events
+  btf.addGlobalFn('themeChange', runChartJS, 'chartjs')
+  btf.addGlobalFn('encrypt', runChartJS, 'chartjs')
+
+  window.pjax ? loadChartJS() : document.addEventListener('DOMContentLoaded', loadChartJS)
+})()</script></div><div class="aplayer no-destroy" data-id="8314925332" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script>(() => {
+  const destroyAplayer = () => {
+    if (window.aplayers) {
+      for (let i = 0; i < window.aplayers.length; i++) {
+        if (!window.aplayers[i].options.fixed) {
+          window.aplayers[i].destroy()
+        }
+      }
+    }
+  }
+
+  const runMetingJS = () => {
+    typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+  }
+
+  btf.addGlobalFn('pjaxSend', destroyAplayer, 'destroyAplayer')
+  btf.addGlobalFn('pjaxComplete', loadMeting, 'runMetingJS')
+})()</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      pjax.loadUrl('/404.html')
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

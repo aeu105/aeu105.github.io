@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>raspberry | 寒酥绛</title><meta name="author" content="@王兮沐"><meta name="copyright" content="@王兮沐"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="有东西被加密了, 输入密码查看哦!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="raspberry">
+<meta property="og:url" content="https://aeu105.github.io/2024/05/20/raspberry.html">
+<meta property="og:site_name" content="寒酥绛">
+<meta property="og:description" content="有东西被加密了, 输入密码查看哦!">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aeu105.github.io/img/default_top_img.jpg">
+<meta property="article:published_time" content="2024-05-20T12:41:03.000Z">
+<meta property="article:modified_time" content="2024-10-21T08:50:12.744Z">
+<meta property="article:author" content="@王兮沐">
+<meta property="article:tag" content="raspberry">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://aeu105.github.io/img/default_top_img.jpg"><link rel="shortcut icon" href="/img/icon.png"><link rel="canonical" href="https://aeu105.github.io/2024/05/20/raspberry.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":512,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"Author: @王兮沐","link":"Link: ","source":"Source: 寒酥绛","info":"Copyright belongs to the author. For commercial use, please contact the author for authorization. For non-commercial use, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"You have switched to Traditional Chinese","cht_to_chs":"You have switched to Simplified Chinese","day_to_night":"You have switched to Dark Mode","night_to_day":"You have switched to Light Mode","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'raspberry',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (true) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-image: url(/img/default_background_img.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/icon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">21</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> HOME</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> ARCHIVES</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> TAGS</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> CATEGORIES</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> LIST</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-image"></i><span> GALLERY</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> LINK</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> ABOUT</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/default_top_img.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">寒酥绛</span></a><a class="nav-page-title" href="/"><span class="site-name">raspberry</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> HOME</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> ARCHIVES</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> TAGS</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> CATEGORIES</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> LIST</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-image"></i><span> GALLERY</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> LINK</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> ABOUT</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">raspberry</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-05-20T12:41:03.000Z" title="Created 2024-05-20 20:41:03">2024-05-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-10-21T08:50:12.744Z" title="Updated 2024-10-21 16:50:12">2024-10-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/board/">board</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/board/raspberry/">raspberry</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">9</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>1mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:365,&quot;messagePrev&quot;:&quot;It has been&quot;,&quot;messageNext&quot;:&quot;days since the last update, the content of the article may be outdated.&quot;,&quot;postUpdate&quot;:&quot;2024-10-21 16:50:12&quot;}" hidden></div><div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="6d5b3a1e5176d75b0b03eae105ddfb4200d104e2bf9383efd08f63a2423a6a39">52cc2b611a1c331f959e97bb560f9cb15821750949e1f25e0b6ddf021cb1ac7fc137df3c6a236a3affde7c11e045ef3e496b582d2c44995f3c992d11a52e18d8db12e3d50232662dc096c4aa2fa6d54c7b59fdf3766c0b6d414ad9017ff167416af81710cb95c919f0ce427587f761df8be042a06f33ec9596e1b7037891ef17875f0d935f236c6b4ff59ff7ac44871fd8917fb86708eda2372889ffa93d2f4e49598909b98c02e8f50b1d72989ce01f0fd65d98506eef3543511d63dd776f0f9751ecf1c1c711afefac25e46fe37ed72f703564df763710df96843413fc8856b7d76966d2692ad79a0e091f88fc37dd96e954cd6d8decbe868b829f2cdf15c21cf817712cfcadea89bdde2767f4ecc893a3fdc23a2bfc3a469e81b5a19e203c8afc93961e03b212730b90c285fc130182bc97f13383129e4d7ea38cd757410b96a9041793ef612ea5306183b81b7bd321274e290faa92a97f04097282fb97117b43a42c23d3af0886be9d878095198ed3ebe66db6cf2b95b6c6dfad56d3716c7cae251b20024aed37643c39ee25cced9a75156e77b9a0f3353fe793c4e53114230ea8ceddedcb26726877e6b702eede6b3301495013495ac7f25cf0b22d4019f879345c37b7da008e122ac22cc8760a06e8fcbf45fc8e629aaa248101a11be617063436427ae566347a8736b1aef3fa02c8be76ecdff6bba3c3147ee924453561710d6a9e5482a3a0a465d3d99f9f27e0292ca69b64bc2796da69014f0870f9f4dd03cf36dd10f8fbebda1c7a83a3278d4a4c4b3793b9e79e808b481112bceb21ccf51be7a8e8a7d870a1a18e0b49f7d1b978f1dd7db7d66c9892a039f932b28af5aae2a3cae4b71642ce0e8531dd597a2fa91554b9165e01c742e4f6d3691967a3b0fcffe69f3ac53ffd939391504b665704415fbd1307e478cc3daa479a78e3949ef4f5aac0bd88d13d602344386ab2c8f4434e50b7de7b3f7a13b5c7081d40b294d5f6bfe6793cbe0500b41268fb7acf6235d9ab2bf95bf422779ec7300629a8149a6eb1310fbd48d2765859cedf115aa5b7500419bbb6f91debe39f83d9c431d30a113e3ff7f244b08f900276560fe8dc16b4c6c0c590f291e96e8703c6f57110bddea4c6c1d38c8efcc8902b7535db0bd35e784ea474c0b965a407bec393abf50c834e341b82a07b242afb9577b62f15cf1d10954e703f0ee8f83ced667d8b2331f79408c14ebdc3ec0628ccae81e456adb55c3175a5eea8ba380e3d1289c2f271ca4b146f38744d3b3401c61944826740a62bfc88bba8c05f6062230ad4040cd4e114bf57ddf5b5ca1a7717398623d3bdf26f1bc0a38f33634472a90f9f4b4df9365b33f270d463e4a097ff9ed02d6d36cd59329f6d84d24ed11b1abdd9d8fd105f3dff8fc68102cfb02f1ba204327d388de001684843dc85ffec3df5bb5cbf7b35a9691f936f59a0650709a3344fe0ceb9d8134b9d5b7ad8045e131c0de3f75714ea6904769a7ee06add9d3b5fc76b5940478abb8face42edc7058333a1a2f821ad9f753754ab1693f6357ca574141270295f30dbaf3862ff0a63c7b1ffb8b4196f2a0b96a512ff4ee175e078c2dd135cee205aaf3dfa15f7d35f3b59ed5fb579a30620cd5c1b40a3dd38640267600b7c8e2e51f363d61d2f76fe57c1a50658d7ad62aa3acb1ea321304d98c48ceccfc1c726b2fe9516383247ca515a9b4c224c124bb55476242a1e5a9ff5b85ab5703fd7475489053de46cee29da31330e9c52432acaeb162c497b4d351eadb6fbc4dc0c5da24e98c8069bb370e93721dc962e92903dafa130149f3e8d06387ab64a92ad38b1ce4cb383e79d5320b4920979cd4c4fcf9cfecc0eb49847ce5b8fa55ca4717e2bb2e9efd6811efe18e9b9c8b685848e0aebef8593c12afc64aeab4dc66a90b4c83f501043973b0bf3c5023e63af5a47d7fdf1e059937e35e2fd7eda71000470a8927f6e5af3c2ba63dabf18d7da5b8798076c922c20fa302b1503e7c427ae8b46d2c58b006d026f162c250da375036c77cfeb1eadb08c7b9c98b0d91fed2c6a4998a5dacca9ff7c69b7cc0f81925a6a4aa46b78312278a74d0deda2b7486e6b5f0612978a8b0841353772a09d8a20ce85048decda43f54d159f7e1e34f4177edc9628dcc504f54c12b7024a33cee4e9e2e465e92fc76ae5b4880bcdfca168822f4ca8e6bc508a70d57a2a8ec4f3062ec6a396a21cb3a6a0568524872a0cd79450ca957d474fda83f938f90bb858b3d4de3b13f1ea0c78c941d78855820261d001bf83a092011541f268dfdd71535333b759b6de93c56e31a37df853d45a8b871cd88aef288b745a1e605294529a9bfbbc9fcb79139e4102a9e53231d4bb438a299cc89f7ef9ca6bcf98663371cf5cf0750f2ba95776ac07efe7384c2b2791de1b117d11084df88edef762668112aac68f12be2543b4efb32426a3b0914825076bb0b9e952cfeb3d94039af5dcf9121d31b83c257e2b0f9f9515e18d4f9b23dc10a19f69b38a75615d15fbaa0c5f1211fa49765ba83a6876466b52edaeb4b51d567368325f0e4fe4f9d39202c4300f3fd1cf37bd3af34a43865f55dff021c827c1707f50ff544164e0f5015b89ce3da38a30e7172952e8de7464f98cd43941b6da61fbd92a81361bbe12825d83d48fef87eea7dc56656d48d0d05b99d9c64c07b0091f49a65d7f3fb7b40a9e026b4ca2cf2a4bd492dfeb98814e482b74c4129575b1b78cfcf97a7acb3ecc1ce9947373301dbdb854c1f31ccfbf9f4b6d85eb6855986a7ec4f5994f82bc443e49b65740ad5cf78b2cd5bb72faecad370a0598bf52d1b77b61a83cd9d42c8465d6a36fb5e9d9996f24787fb9e09f28cea776ba876443a37006930053e8f185da2f8d5166d07cc46b9384f41c5883892520e3a07a080f53f25357d44dc9500bf9a93c136ae1b30012be7498cf4b1a338f50a31ea740038cf5ff5b9c43daf1eada463353af316423454659f7ecda012ec3227ba1216e2e67ce6d15743aed1b906b63ad3254e74c24ce3309527e3fe046bad668fbca6ac3808fe4d021c27728e5d0a0d3d84938edb8a8228f942ac9308be386ce7ec12af7c5aef0bd82a7c7e5a76ee1b31511825f945f87ac9776d25018c78d427324e2927f79cbe01aa680f058788b908501889bcbb3562bcaeb88c38c2c111ed9db7c16f174a0408221fd84873beda7e7ef8289d73f8774d83f9950844334664ef1556bb1fcc1dd22014de182e5e786f0356c091928db8393994f83257c30e0b14cc7f1565bfea0905f15b29f20342a31c7363b28c5f67bdd47e6361daaa855a09da30e3bc03401ea8a07433a0d19b0ff13bb30a1481804c4f25a961ba270ac42461db8411b04cb143ea2cc584b682d99d50d7dba7b7008078f3a7ce9fae1e8eb0fe8dd362e97ca5708754caead10c45e44d26dae713ba82f4f26cf2ce2ee420094d00269bc8fb8c55cf7af178c1bec118806511e5e124a9b96a44f5f5712945ae6950db9bc7df643ff60085273a2c89f9436c918bec76edcd20b65077fa7f72252df7a4d946c4fba95e3b8016281502f19dab7455c664c465bdc8f961f9f8d05b34b01445875807ace6dd1c04f53f0318d1593449125e0f2549106985792f8314a5ae248663bcc667a2b559346056dcb5da394198d6e9b8e35bd1021a6cd88a637c818dd29af11b05a7a1faceaf082dcc8a226c5a65c278f095b5f53ea1e410d601988bb916c633a12e4b2e8edff35edabe62117ead418f75b5887a30e3b310cb4c0c266922320c028d4e5b7a46e52e9b8ea275dbbb04051dea05c1cd4d2377194bfff0bab4df25fc4bf06b32e60dd5d1cde36cf8d5d9319d790ab99ed75b8cbe5ea8babbea27a29fe9b356b2269abab7b1833d81965eb2814cc821088969c4037745c2a7ad378fa0a8daef378212790a52d06a640d0d5690fa76d058bce806a6ee781ec3cdbbd66dcb79599196043efecc4c272e52184788921c078f322ff39624bbf0bf90b44bfe33772f66b4591c6acedac45c12c1217d82d198bb0ca924b43a5110fece193368c8845bab3c720a80b717714fb32632ca92382d370427197f9396a4f34d672a02ec866e2418adbd51210ec383a186c2b2ec0e2b68553caff5497a0828baee7a9f186266c3dc7c10917e977127852a5f02c8e0936b1ad9c519274b24f483a2bef3a6b60f93fbfa49fa67a77e4d7909966b519e2ba2a271658cef466339378763b0541d90719a8e4ceba2c3ae6e68445f316e2935d5c01472d3bdc96372c35b2d087f17e7eb46d99d5dd90991c86bb3d0eda118cab45683de2e04225d527d08e1d2eb30292231396e56d1f6bf9e073554484a2539a917ff2fdfaf6c5c6a690d18e114b62cf1d733ef2e055b03460e8910b4dda6bdf38765daba3f6c7e2e0c29e634acb80a17905bbd583b7224c57fbcc248c9071788c7281fb96f6cf5feb04945ce882b2ea70c078316e135c2578deb8a7c077e923054a22740082de03d9643f7c01bcc763c7832e6bd481fd43947f5d9470d2b9f9692b1a82f8cb876f386faa91abbe285ba50f5a5547cfc9f659bd32c1110590e9d1d94a5c914567bbc27b8c6a8eede674f802ba5a34b55282e53cf92d02cf746b949742c71db3b728cf324dea2a69589190ada294421056b25a147a0e23bef43c6b3fa6b8c0fa7efb3fc3e5413f3eaebe4008e4645203a4f38bb111a9762b561503f9b0164f793c8f82ca29274b5824394348d062bbf3e4dc0f2c6b8cc6e151ae57e1e5041cf9d8a69dd7bba03ece6d4cb7973d30294e1d0ae58cbb56fcf5af272c35f644ad582e15c19235ea3564a593e485f8b6f328d68c69813bea324b3b6b930c783c9eebe96da804d8ff7e6abaabd17971ff1ea8470a4be18438b8925203cd3a80ed6756c1547de19ba45c5e727015e3c58bcf71550b8d097566b05005d132d48fcf872ef2fe899e5caa299822b7b2b4b6130c5729be31d2b58cb379baf8a8c4fd7d14856792ddc49ab3d45363cff55e85175342098de4662cf0a11b4676a16ef82b935320087bcaf65be08ceb75cd06be500b19595c66e4ca66f22d92ca1824d8c1573d4d5da5d514b93dea0ff0e43b82c47358bd08cbddc8c367b84b888c964c032ec706ca080a45bb36b01dc4022a27cef68fbe5931252240403be418ea4dffb9c469775bdcc8f1d2652420e01bab1843c8c840ec4e72504a58e4b88ab8a82a55c1562748a59f843c1e327d18d59e93109ffaee5afe420234bfead3a0f71fa324fb447aeb99ed2584c189910ce0835e755e28bfd7a704feb2a0f2d1397baff825afdd1723bdda3a0e718c2c43244c481671a207a1fd7ab6b76a5eb6eaa6c5d31a03298292f805acc0ecb8402261c9a0e61273c4dc5871b8f1d834ba4bfd9e3b5f7edd9555b3e74ce57179a3896dc931fab2c287b2599937d3b6ed8e3f099706b8ae8ecf69cdac127992e7dbac1172d7a0ef44afc5af219f681c3a36beaba250a5a30d9c51b0ac4d1b9ea9603d18d03169ce1e92ff94c059c5dc19931c79750b37466ebce60ee0e532515e575955f43ee124a76277afbe5837d9c1565d23660e6f40c410bcf0376521294fa80487f5b025b2b9b23ca5e107ff3e93c3673824537bf572695411aa224c058070024bde5a69602ea8f98991e6c1bb57734393519a17e10de0013c7dce0ae8299e761f54795b72f66e4db30c8e3d60cbe8a39d45849f64c2344bc6bfe6a5dd62baae34c621f3df8f129d4d121f18c897e636b6bab23071e741edb634f5789f25607bd4f9b318b82bb9c2fee2d3473c13e77c6a1fdda2c964d2537c2af182aa09e707b2929b6a2d21ec952f6a078342555d8e59c296fdddcc19797ace970d11a7ecb6488b8e227195dc5a826f8351656b3a9fbd6f1c50415f7445783575c1259c186957519709240d0ff0ffa8975b9830be7d2414e45aa2c2b48fea8ef4ddb5d35c900d1ea9c61152f02875415dc2dbbd079edd258f8c93d8518560c0f5f9ea472f30221ab7a526eca01c91160d0913df371a067ddbe8c94d4daf28d0254fec27d3a7c5acea8a9eb4eff7f6b528de1b371ecbe999be1d9d2ab24f48aa93f037e225b5d206f9cd5fe6f88c46de05e5a84ffe2ed869877fc0b0686ce33f1e2368e8d6632228ea867905886e0f6eb92873580bd3dfef6ddc419448b101fdb785dda00dd13e949147be8479d569364bcd02cd3b660c6237c719590fdcaa1f49e2cd77b865c19ad241cd91be5425973f53be9d449a38f09631486844cb2d57420d7c712322d45343ca346f789cd0da5c114ae95eb7141b1deec00684e69eb2589060dccacb2c103ba8e5c3b0db81ae032a6fa993be314452d703dac4a5f817a2cb7e1185758df2a0b847245c8aea160538f887d02da5f0b182ed3dd7afdd27fe4fd1d5298128af8fe9c12427f502dbae75b8d3b4fcaea18c21dab3ede0c2df126c1ceea2b172315d90a2182d3684e131b9dc800ef276f2b17385d59a35854a725af4b90f9da090b53063e104bc78b97992ac10f6334d55d18db73369cd76c0c400e1e22f53c60af052af73010d60f5425199dea120b3d555f8a1c993bdb52f492568311f442a0b75d24a9c6764f5184a190dbb4a75becbea103776796ab96f68a22642a3b0449d4af7882cac98c6f460068ee2008501626fdd3096ba45d668941856b3d307433d0c3431fcd4e91fd3cf9db343503695141bb78e7e0fac5736ce20f15fc78951a5a037f519c34c8f4126623bb104f5adf924db462a96d7f41f1078920a84c873f17dbcf1aca2573b7b1a83b24d54feb1df7c713520e272d48932fdce5fc3c9d26766cba81dd80f8dd8ce7e08ae1a980b4afa965ca423ebeed54a6db1718eb0b19b3b87b7299fe05aa76421089ccff9e2d23b379d7147626f21a949d4e178a5e132f2ba81d6635ba634362ec64747e64ed5440312b6fa021732abe8af4d24d51e434311e8041edb76ba6fb83d6ea14d8891c3758e3ee9f6a1eab2e194f6d209c53cc13edf654a55c2144a837e1f95ae4294ef579073b902daed0b20364f9c62663e0051ded00a510c1af74f87ac08f5c2502e150d2541a09669f109f7302ddf948f8bc3cfaa5290493fbc74692ce5a037af95138bc698ed79324e61b962fbe0d86f719bb4be65b226f0ab6b790f8f3683e2f1210556608b117763227a6c0eff84e35b857a49a7490aaaa39406ebb604c7d4bf1d0016c72432406389ec772570362b0942737da11cbf7b93a77e8ff0e28ef896bad08a0c6c58ab8b9f48827c61887bc7badc01f973ff9d55c943707332338372d54fabf9bf986185c9e1608b51d068d31ee404060adfff24f58429ebab0c0801a516c2b8fa38add8c30545f1d58b57aa3c73c310cf1b9d66e0fbd8ff6d8253e683d95aaeeafb7911c5689603e176f73be57bbb764bed606a92702920ef595949bc42293569758ade2a6acd012f9fb9a390e82093eb3cc764b15ed808888121e0b480f7ad6602fe1146341d3654d0c359f03dbb821d374fd19f6a4879f39f983d420421d2c7cab15d8af46bc0ca07e299e24eea4b285af511567fa796934b19284f4d31be8d49209f1b8584bd267f146cd116218c83b65a1ae9ccb39eb144aa09481bcd6113168df77d49bb4f3e16b0f3a9822875ed241b0f95a815f1cdc5ea41c9d6b8615c956b9eac980024e1e1e9e8882df6c97a30a3f2d7c61ed6955d4feec423cbd782d684ebfa350f661e8c89520884c387d12172f9953d9c6</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这里需要一个密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css"></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://aeu105.github.io">@王兮沐</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://aeu105.github.io/2024/05/20/raspberry.html">https://aeu105.github.io/2024/05/20/raspberry.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/raspberry/">raspberry</a></div><div class="post-share"><div class="social-share" data-image="/img/default_top_img.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>Sponsor</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/pay/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/pay/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/pay/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/pay/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2024/08/26/plc.html" title="plc"><img class="cover" src="/img/default_footer_img.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">plc</div></div><div class="info-2"><div class="info-item-1">   2927d6abb37c17bdcf74b51704d84c9170f01470d63a6fb9e117ef6d1b97ac22                               这里需要一个密码.                 </div></div></div></a><a class="pagination-related" href="/2024/04/24/mysql.html" title="mysql"><img class="cover" src="/img/default_background_img.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">mysql</div></div><div class="info-2"><div class="info-item-1">   52cc2b611a1c331f959e97bb560f9cb15e1ef1d54e07ce452f4d4ef1109107a9                               这里需要一个密码.                 </div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">@王兮沐</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">21</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">17</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/aeu105"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/aeu105" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:lyu891330971@hotmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">//</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content toc-div-class" style="display:none"></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/08/26/butterfly.html" title="butterfly"><img src="/img/default_top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="butterfly"/></a><div class="content"><a class="title" href="/2024/08/26/butterfly.html" title="butterfly">butterfly</a><time datetime="2024-08-26T10:31:05.000Z" title="Created 2024-08-26 18:31:05">2024-08-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/26/plc.html" title="plc"><img src="/img/default_footer_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="plc"/></a><div class="content"><a class="title" href="/2024/08/26/plc.html" title="plc">plc</a><time datetime="2024-08-26T10:31:05.000Z" title="Created 2024-08-26 18:31:05">2024-08-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/20/raspberry.html" title="raspberry"><img src="/img/default_top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="raspberry"/></a><div class="content"><a class="title" href="/2024/05/20/raspberry.html" title="raspberry">raspberry</a><time datetime="2024-05-20T12:41:03.000Z" title="Created 2024-05-20 20:41:03">2024-05-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/04/24/mysql.html" title="mysql"><img src="/img/default_background_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mysql"/></a><div class="content"><a class="title" href="/2024/04/24/mysql.html" title="mysql">mysql</a><time datetime="2024-04-24T01:43:06.000Z" title="Created 2024-04-24 09:43:06">2024-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/04/23/gd32.html" title="gd32"><img src="/img/default_footer_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="gd32"/></a><div class="content"><a class="title" href="/2024/04/23/gd32.html" title="gd32">gd32</a><time datetime="2024-04-23T13:50:02.000Z" title="Created 2024-04-23 21:50:02">2024-04-23</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/default_footer_img.jpg);"><div id="footer-wrap"><div class="copyright">&copy;1995 - 2024 By @王兮沐</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><div><span>V 5.2.2</span></div></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(async () => {
+  const showKatex = () => {
+    document.querySelectorAll('#article-container .katex').forEach(el => el.classList.add('katex-show'))
+  }
+
+  if (!window.katex_js_css) {
+    window.katex_js_css = true
+    await btf.getCSS('https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css')
+    if (true) {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js')
+    }
+  }
+
+  showKatex()
+})()</script><script>(() => {
+  const $chartjs = document.querySelectorAll('#article-container .chartjs-container')
+  if ($chartjs.length === 0) return
+
+  const applyThemeDefaultsConfig = theme => {
+    if (theme === 'dark-mode') {
+      Chart.defaults.color = "rgba(255, 255, 255, 0.8)"
+      Chart.defaults.borderColor = "rgba(255, 255, 255, 0.2)"
+      Chart.defaults.scale.ticks.backdropColor = "transparent"
+    } else {
+      Chart.defaults.color = "rgba(0, 0, 0, 0.8)"
+      Chart.defaults.borderColor = "rgba(0, 0, 0, 0.1)"
+      Chart.defaults.scale.ticks.backdropColor = "transparent"
+    }
+  }
+
+  // Recursively traverse the config object and automatically apply theme-specific color schemes
+  const applyThemeConfig = (obj, theme) => {
+    if (typeof obj !== 'object' || obj === null) return
+    
+    Object.keys(obj).forEach(key => {
+      const value = obj[key]
+      // If the property is an object and has theme-specific options, apply them
+      if (typeof value === 'object' && value !== null) {
+        if (value[theme]) {
+          obj[key] = value[theme] // Apply the value for the current theme
+        } else {
+          // Recursively process child objects
+          applyThemeConfig(value, theme)
+        }
+      }
+    })
+  }
+
+  const runChartJS = () => {
+    window.loadChartJS = true
+
+    Array.from($chartjs).forEach((item, index) => {
+      const chartSrc = item.firstElementChild
+      const chartID = item.getAttribute('data-chartjs-id') || ('chartjs-' + index) // Use custom ID or default ID
+      const width = item.getAttribute('data-width')
+      const existingCanvas = document.getElementById(chartID)
+
+      // If a canvas already exists, remove it to avoid rendering duplicates
+      if (existingCanvas) {
+          existingCanvas.parentNode.remove()
+      }
+
+      const chartDefinition = chartSrc.textContent
+      const canvas = document.createElement('canvas')
+      canvas.id = chartID
+
+      const div = document.createElement('div')
+      div.className = 'chartjs-wrap'
+
+      if (width) {
+        div.style.width = width
+      }
+
+      div.appendChild(canvas)
+      chartSrc.insertAdjacentElement('afterend', div)
+
+      const ctx = document.getElementById(chartID).getContext('2d')
+
+      const config = JSON.parse(chartDefinition)
+
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark-mode' : 'light-mode'
+
+      // Set default styles (initial setup)
+      applyThemeDefaultsConfig(theme)
+
+      // Automatically traverse the config and apply dual-mode color schemes
+      applyThemeConfig(config, theme)
+
+      new Chart(ctx, config)
+    })
+  }
+
+  const loadChartJS = () => {
+    window.loadChartJS ? runChartJS() : btf.getScript('https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js').then(runChartJS)
+  }
+
+  // Listen for theme change events
+  btf.addGlobalFn('themeChange', runChartJS, 'chartjs')
+  btf.addGlobalFn('encrypt', runChartJS, 'chartjs')
+
+  window.pjax ? loadChartJS() : document.addEventListener('DOMContentLoaded', loadChartJS)
+})()</script></div><div class="aplayer no-destroy" data-id="8314925332" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script>(() => {
+  const destroyAplayer = () => {
+    if (window.aplayers) {
+      for (let i = 0; i < window.aplayers.length; i++) {
+        if (!window.aplayers[i].options.fixed) {
+          window.aplayers[i].destroy()
+        }
+      }
+    }
+  }
+
+  const runMetingJS = () => {
+    typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+  }
+
+  btf.addGlobalFn('pjaxSend', destroyAplayer, 'destroyAplayer')
+  btf.addGlobalFn('pjaxComplete', loadMeting, 'runMetingJS')
+})()</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      pjax.loadUrl('/404.html')
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
